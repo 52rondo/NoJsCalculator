@@ -25,7 +25,7 @@ public class Calculator extends HttpServlet{
 			numTotal = (String) sess.getAttribute("numTotal"); 
 		}
 		
-		String num = req.getParameter("number");
+		String num = req.getParameter("digit");
 		if (num != null) {
 			if(num.equals("=")) {
 				//turn calculation string into char arraylist to calculate
@@ -151,6 +151,8 @@ public class Calculator extends HttpServlet{
 							}
 							int sum2 = Operations.calculate(calcStack.remove(index - 1), calcStack.remove(index - 1), calcStack.remove (index - 1));
 							result = Operations.calculate(calcStack.remove(0), calcStack.remove(0), sum2);
+						}else {
+							result = Operations.calculate(calcStack.remove(0), calcStack.remove(0), calcStack.remove(0));							
 						}
 						
 					}else {
@@ -174,6 +176,10 @@ public class Calculator extends HttpServlet{
 				sess.setAttribute("numTotal", numTotal);
 				System.out.println(numTotal);
 			
+			}else if(num.equals("C")) {
+				numTotal = "";
+				sess.setAttribute("numTotal", numTotal);
+				
 			}else {
 				numTotal += num;
 				sess.setAttribute("numTotal", numTotal);

@@ -4,6 +4,8 @@ public class Operations {
 	
 	static public int calculate(int a, int operator, int b) {
 		int c;
+		System.out.println("in Operations:" + a + " " + operator +" " + b);
+
 		switch (operator) {
 		case -1:
 			c = a + b;

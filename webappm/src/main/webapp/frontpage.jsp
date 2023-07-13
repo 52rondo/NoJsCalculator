@@ -13,45 +13,46 @@
     <br>
     <div id="mainDiv">
         <div>
-            <table>
-            
-            <tr>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="1" hidden><button>111</button></td></form>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="2" hidden><button>2</button></td></form>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="3" hidden><button>3</button></td></form>
-            </tr>
-            <tr>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="4" hidden><button>4</button></td></form>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="5" hidden><button>5</button></td></form>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="6" hidden><button>6</button></td></form>
-            </tr>
-            <tr>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="7" hidden><button>7</button></td></form>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="8" hidden><button>8</button></td></form>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="9" hidden><button>9</button></td></form>
-            </tr>
-            <tr>
-                <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="0" hidden><button>0</button></td></form>
-            </tr>
-                
-            </table>
+          	 <input type="text" name="number" value="1" hidden>
+           	 <table>
+        		<form action="${pageContext.request.contextPath}/Calculator">
+	           	<tr>
+	                <td><button type="submit" name="digit" value="7">7</button></td>
+	                <td><button type="submit" name="digit" value="8">8</button></td>
+	                <td><button type="submit" name="digit" value="9">9</button></td>
+	            </tr>
+	            <tr>
+	                <td><button type="submit" name="digit" value="4">4</button></td>
+	                <td><button type="submit" name="digit" value="5">5</button></td>
+	                <td><button type="submit" name="digit" value="6">6</button></td>
+	            </tr>
+	            <tr>
+	                <td><button type="submit" name="digit" value="1">1</button></td>
+	                <td><button type="submit" name="digit" value="2">2</button></td>
+	                <td><button type="submit" name="digit" value="3">3</button></td>
+	            </tr>
+	            <tr>
+	                <td><button type="submit" name="digit" value="0">0</button></td>
+	            </tr>
+           	</table>
         </div>
         <div>
             <table id="sTable">
                 <tr>
-                    <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="+" hidden><button>+</button></td></form>
-                    <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="-" hidden><button>-</button></td></form>
+	                <td><button type="submit" name="digit" value="+">+</button></td>
+	                <td><button type="submit" name="digit" value="-">-</button></td>
                 </tr>
                 <tr>
-                    <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="*" hidden><button>*</button></td></form>
-                    <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="/" hidden><button>/</button></td></form>
+	                <td><button type="submit" name="digit" value="*">*</button></td>
+	                <td><button type="submit" name="digit" value="/">/</button></td>
                 </tr>
                 <tr>
-                    <form action="${pageContext.request.contextPath}/Calculator"><td><input type="text" name="number" value="=" hidden><button>==</button></td></form>
-                
+	                <td><button type="submit" name="digit" value="C">C</button></td>
+	                <td><button type="submit" name="digit" value="=">=</button></td>
                 </tr>
             </table>
         </div>
+        </form>
         <div id="answerDiv">
             <div id="answerBox">
                 <input type="text" name="answer" value="${result}">
@@ -81,7 +82,7 @@
         margin: 2px;
     }
     input{
-        border: 1px solid black;
+        /* border: 1px solid black; */
     }
     div#answerBox{
         border: 2px solid red;
